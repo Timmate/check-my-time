@@ -1,5 +1,5 @@
 ## work-attendance
-A couple of scripts that helps you become a King (or Queen) of Pedantry.
+A couple of scripts that can help you become a King (or Queen) of Pedantry.
 
 Actually, it was a small and neat homework project for [Al Sweigart's](https://inventwithpython.com/) amazing [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter15/) book
 that somehow grew into this. I was so encouraged to experiment with the `datetime` module

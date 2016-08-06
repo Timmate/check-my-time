@@ -1,6 +1,8 @@
 ## work-attendance
 A couple of scripts that can help you become a King (or Queen) of Pedantry.
 
+Python 3.X only.
+
 Actually, it was a small and neat homework project for [Al Sweigart's](https://inventwithpython.com/) amazing [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter15/) book
 that somehow grew into this. I was so encouraged to experiment with the `datetime` module
 and try to create something helpful and useful that I eventually came up with this
@@ -8,7 +10,7 @@ simple and free app that is similar to [easyclocking](http://easyclocking.com/) 
 some of [these](http://www.businessnewsdaily.com/6730-best-time-and-attendance-systems.html)
 time and attendance systems.
 
-## `work_attendance.py` usage
+### `work_attendance.py` usage
 Firstly, run `change_date.py` to change the imported module name in the code of this script.
 You should do it only once a day, in the morning, when you start using this app. Otherwise,
 the script will not work correctly.
@@ -17,11 +19,11 @@ Enter the same name for the second time a day to record the time he/she clocked 
 Note that you are able to close the app and load data already written for the current day
 later, when you decide to continue working. There is also an opportunity to change start time of the working day if the script is run for the first time a day.
 
-## `change_date.py` usage
+### `change_date.py` usage
 Just run it in the Python Shell or IDLE's Python interpreter to change the module name
 that is used by `work_attendance.py`.
 
-## `report.py` usage
+### `report.py` usage
 (Please note that before using this script you need to install `openpyxl` module
 that handles the work with Excel spreadsheets. Use the `pip` utility for that.)
 Copy some files from *test_data* to *wa_files* or create your own files with data
@@ -34,7 +36,7 @@ working month or the week to create a report for that period of time.
 Note that days values in `'wa_...'` files must not be a zero-padded
 decimal number.
 
-## `functions.py` usage
+### `functions.py` usage
 You do not need to use this script as it just contains the functions that are used by `report.py`.
 
 ## License

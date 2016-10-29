@@ -1,45 +1,58 @@
-## work-attendance
-A couple of scripts that can help you become a King (or Queen) of Pedantry.
+## check-my-time
 
-Python 3.X only.
+A simple time and attendance system.
 
-Actually, it was a small and neat homework project for [Al Sweigart's](https://inventwithpython.com/) amazing [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/chapter15/) book
-that somehow grew into this. I was so encouraged to experiment with the `datetime` module
-and try to create something helpful and useful that I eventually came up with this
-simple and free app that is similar to [easyclocking](http://easyclocking.com/) service or
-some of [these](http://www.businessnewsdaily.com/6730-best-time-and-attendance-systems.html)
-time and attendance systems.
+It is a simplified version of [easyclocking][1] service and some of [these][2]
+time and attendance systems. You can read more on this on [Wiki page][3].
 
-### `work_attendance.py` usage
-Firstly, run `change_date.py` to change the imported module name in the code of this script.
-You should do it only once a day, in the morning, when you start using this app. Otherwise,
-the script will not work correctly.
-When you are ready, run `work_attendance.py`. Simply enter the person's name and optional time argument for the first time a day to record the time he/she clocked in and how many minutes he/she was late today.
-Enter the same name for the second time a day to record the time he/she clocked out and compute their working time.
-Note that you are able to close the app and load data already written for the current day
-later, when you decide to continue working. There is also an opportunity to change start time of the working day if the script is run for the first time a day.
+Python 3.x only. (for Python 2.x backward compatibility see [this][4])
 
-### `change_date.py` usage
-Just run it in the Python Shell or IDLE's Python interpreter to change the module name
-that is used by `work_attendance.py`.
 
-### `report.py` usage
+### `check_my_time.py` usage
+
+* Simply run this script wherever to start working. It will automatically create
+  a tree of directories where all text files with data will be stored.
+
+* In the app:
+  * Enter a person's name and optional time argument for the first
+    time a day to record time he/she clocked in and calculate time he/she was
+    late for / early that day.
+
+  * Enter the same name and optional time argument for the second time a day to record time he/she clocked out
+    and calculate time he/she has worked for.
+
+* Of course, you are able to close the app and load data already written for the
+  current day later. Also, you can change start time of a working day in case the
+  script is run for the first time a day.
+
+
+### `report_creator.py` usage
+
 (Please note that before using this script you need to install `openpyxl` module
-that handles the work with Excel spreadsheets. Use the `pip` utility for that.)
-Copy some files from *test_data* to *wa_files* or create your own files with data
-there to test this script.
-Entering `MONTH` and `16/06/2016` (it is Thursday) creates a month report for
-the whole June of 2016 (from the 01/06/2016 to 30/06/2016). The same thing
-with `WEEK`, except that a report for one working week will be created (from
-13/06/2016 to 19/06/2016). You could enter any date that belongs to the
-working month or the week to create a report for that period of time.
-Note that days values in `'wa_...'` files must not be a zero-padded
-decimal number.
+that handles work with Excel spreadsheets.
+One way to do that is to run `pip install -r requirements.txt`
+in command line — this will prevent errors that may be caused by version
+incompatibility.)
 
-### `functions.py` usage
-You do not need to use this script as it just contains the functions that are used by `report.py`.
+* Simply enter any date that belongs to a particular week or a month to create
+  a report for that period of time.
+  E.g. entering `M` (Month Report) and `16/06/2016` (it is Thursday) creates a month
+  report for the whole June of 2016 (from 01/06/2016 to 30/06/2016).
+  The same thing with `W` (Week Report), except that a report for one working
+  week will be created (from 13/06/2016 to 19/06/2016).
 
-## License
+* Also, you are able to choose kind of report: Simple or Complex. Simple Reports
+  contain only overall time values, while Complex Reports also include average
+  time values.
+
+* You can test the script by running it on test data in *Test Data* directory or
+  create your own text files with data with `check_my_time.py`.
+  Note that *Report* and *Work Attendance Files* directories must always be in
+  the same directory as `report_creator.py`.
+
+
+### License
+
 Copyright © 2016 Tim Kornev (@Timmate).
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -49,3 +62,9 @@ You may obtain a copy of the License at
 http://www.apache.org/licenses/LICENSE-2.0
 
 See the License file included in this repository for further details.
+
+
+[1]: http://easyclocking.com/
+[2]: http://www.businessnewsdaily.com/6730-best-time-and-attendance-systems.html
+[3]: https://en.wikipedia.org/wiki/Time_and_attendance
+[4]: http://python-future.org/quickstart.html

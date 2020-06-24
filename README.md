@@ -51,19 +51,6 @@ incompatibility.)
   the same directory as `report_creator.py`.
 
 
-### License
-
-Copyright © 2016 Tim Kornev (@Timmate).
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-See the License file included in this repository for further details.
-
-
 [1]: http://easyclocking.com/
 [2]: http://www.businessnewsdaily.com/6730-best-time-and-attendance-systems.html
 [3]: https://en.wikipedia.org/wiki/Time_and_attendance
